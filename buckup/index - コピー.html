@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <!-- meta情報 -->
+  <title>uiconnect</title>
+  <meta name="description" content="ポートフォリオサイトです">
+  <!-- インデックスしない -->
+  <meta name="robots" content="noindex">
+  <!-- ogp -->
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:description" content="">
+  <!-- ファビコン -->
+  <link rel="icon" href="./images/common/favicon.svg" type="svg+xml">
+  <!-- css -->
+  <link rel="stylesheet" href="./css/styles.css">
+  <!-- JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script defer src="./js/script.js"></script>
+  <!-- グーグルフォント -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<div class="wrapper">
+  <details class="js-details">
+    <summary class="js-summary">
+      <span class="summary_inner">
+        概要<span class="icon"></span>
+      </span>
+    </summary>
+    <div class="content js-content">
+      <div class="content_inner">
+        折りたたまれている部分です。
+      </div>
+    </div>
+  </details>
+
+  <details class="js-details">
+    <summary class="js-summary">
+      <span class="summary_inner">
+        Q. buttonタグでもアコーディオンは作れそうですが？<span class="icon"></span>
+      </span>
+    </summary>
+    <div class="content js-content">
+      <div class="content_inner">
+        <p>A. <code>details</code>タグと<code>summary</code>タグがオススメです。</p>
+      </div>
+    </div>
+  </details>
+
+  <details class="js-details">
+    <summary class="js-summary">
+      <span class="summary_inner">
+        Q. inputタグでも作れますよね？<span class="icon"></span>
+      </span>
+    </summary>
+    <div class="content js-content">
+      <div class="content_inner">
+        <p>A. <code>details</code>タグと<code>summary</code>タグがオススメです。</p>
+      </div>
+    </div>
+  </details>
+
+  <details class="js-details">
+    <summary class="js-summary">
+      <span class="summary_inner">
+        Q. アコーディオンのアニメーションがなんか変です！期待通りに動作しなくて困っています…。どうすればよいでしょうか。<span class="icon"></span>
+      </span>
+    </summary>
+    <div class="content js-content">
+      <div class="content_inner">
+        <p>A. 以下のポイントを見直してみましょう。</p>
+        <ul>
+          <li>アコーディオンの中身(<code>summary</code>タグのすぐ下)を<code>div</code>タグなどで囲った部分には上下<code>padding</code>を持たせないこと。</li>
+          <li>デフォルトの挙動を無効化（<code>preventDefault()</code>）して、手動で<code>open</code>属性を管理できているか。</li>
+          <li>
+            アコーディオンを閉じるとき（<code>details</code>タグの<code>open</code>属性が取り除かれるとき）は一瞬で非表示になるので、アニメーション完了を待ってから<code>open</code>属性を手動で取り除くこと。
+          </li>
+        </ul>
+      </div>
+    </div>
+  </details>
+
+  <details class="js-details">
+    <summary class="js-summary">
+      <span class="summary_inner">
+        Q. 目次が見たいのですが。<span class="icon"></span>
+      </span>
+    </summary>
+
+  </details>
+</div>
+
+</body>
+
+</html>

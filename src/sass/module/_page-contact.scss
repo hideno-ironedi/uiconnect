@@ -1,0 +1,379 @@
+@use "global" as *;
+
+/*=================================
+page-contact
+=================================*/
+.page-contact {
+  // margin-top: rem(160);
+}
+
+.page-contact__image {
+  width: 100%;
+  
+}
+
+.page-contact__image source {
+
+}
+
+.page-contact__image img {
+  object-fit: cover;
+  height: rem(200);
+  @include mq(md) {
+    height: rem(300);
+  }
+
+}
+
+.page-contact__inner {
+  width: 100%;
+  max-width: rem(640);
+  margin: rem(48) auto 0;
+
+  @include mq(md) {
+    max-width: rem(1150);
+    margin-top: rem(80);
+  }
+}
+
+// エラー表示
+.form__error {
+  letter-spacing: 0.125em;
+  line-height: 1;
+  color: #FF5757;
+  text-align: center;
+}
+
+
+.error-name,
+.error-mail,
+.error-contents {
+  color: #FF5757;
+
+}
+
+/* ===================================================
+フォーム部品スタイル
+=================================================== */
+
+/*テキストボックス・テキストエリア
+------------------------------------*/
+input[type="text"],
+input[type="search"],
+input[type="email"],
+input[type="url"],
+input[type="tel"],
+input[type="number"],
+textarea {
+  appearance: none;
+  width: 100%;
+  padding: rem(10) rem(20);
+  border: 1px solid $white;
+  background-color: $white;
+}
+
+input[type="text"]:focus,
+input[type="search"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+  outline: solid 3px red;
+}
+
+textarea {
+  height: rem(250);
+}
+
+input[type="password"] {
+  width: 100%;
+  padding: 10px 20px 8px 20px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+/*ラジオボタン・チェックボックス
+------------------------------------*/
+input[type="radio"],
+input[type="checkbox"] {
+  opacity: 0;
+  position: absolute;
+}
+
+/*クリック範囲*/
+input[type="radio"]+span,
+input[type="checkbox"]+span {
+  display: inline-block;
+  position: relative;
+  margin: 0 2em 0 0;
+  padding: 0.3em 0.3em 0.3em 2em;
+  line-height: 1;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+/*フォーカス時*/
+input[type="radio"]:focus+span,
+input[type="checkbox"]:focus+span {
+  // outline: 1px solid #ccc;
+  outline: solid 5px red;
+}
+
+/*ラジオボタンスタイル*/
+input[type="radio"]+span:before {
+  content: "";
+  position: absolute;
+  top: 0.25em;
+  left: 0;
+  width: 1.375em;
+  height: 1.375em;
+  border: 1px solid #999;
+  border-radius: 50%;
+  line-height: 1;
+  background: #fff;
+}
+
+/*ラジオボタンチェック印（未選択）*/
+input[type="radio"]+span:after {
+  content: "";
+  display: none;
+}
+
+/*ラジオボタンチェック印（選択）*/
+input[type="radio"]:checked+span:after {
+  display: block;
+  position: absolute;
+  top: 0.45em;
+  left: 0.2em;
+  width: 1em;
+  height: 1em;
+  margin: 0;
+  padding: 0;
+  border-radius: 50%;
+  background: #3D98B4;
+  line-height: 1;
+}
+
+/*チェックボックススタイル*/
+input[type="checkbox"]+span:before {
+  position: absolute;
+  top: 0.3em;
+  left: 0;
+  content: "";
+  width: 1.25em;
+  height: 1.25em;
+  border: 1px solid #999;
+  background: #fff;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+/*チェックボックス未チェック時*/
+input[type="checkbox"]+span:after {
+  content: "";
+  display: none;
+}
+
+/*チェックボックスチェック時*/
+input[type="checkbox"]:checked+span:after {
+  display: block;
+  position: absolute;
+  top: 0.3em;
+  left: 0.4em;
+  width: 0.5em;
+  height: 1em;
+  content: "";
+  border-bottom: 3px solid #3D98B4;
+  border-right: 3px solid #3D98B4;
+  transform: rotate(45deg);
+}
+
+/*セレクトボックス*/
+select {
+  appearance: none;
+  display: block;
+  width: 100%;
+  padding: 10px 30px 8px 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+.selectWrap {
+  position: relative;
+  display: block;
+}
+.selectWrap::after {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid #999;
+  border-bottom: 2px solid #999;
+  transform: rotate(45deg);
+  pointer-events: none;
+}
+
+/* ==================================================================
+フォームレイアウト
+=================================================================== */
+/*大枠レイアウト
+---------------------------------*/
+.form {
+  margin-top: rem(80);
+
+
+}
+
+.form fieldset,
+.form legend {
+  display: contents; /*CSS上は要素として存在しないものとみなす*/
+}
+.form__item {
+  padding: rem(32) 0;
+}
+.form__title {
+  width: 100%;
+  display: inline-block;
+
+  @include mq(md) {
+    text-align: right;
+    width: rem(200);
+  }
+}
+
+.form__item {
+  @include mq(md) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.form__body {
+  width: 100%;
+  margin-top: rem(16);
+
+  @include mq(md) {
+    max-width: rem(740); //幅540 + padding分
+    margin-top: 0;
+    padding-right: rem(200);
+    margin-left: rem(20);
+  }
+}
+
+/*入力フィールド
+---------------------------------*/
+.inputField {
+  width: 100%;
+}
+
+/*補足説明文
+---------------------------------*/
+.inputNote {
+  display: block;
+  margin-top: rem(5);
+  color: #999;
+  font-size: 0.8em;
+}
+
+/*水平ラジオボタン選択肢リスト
+---------------------------------*/
+.radioList {
+  display: flex;
+  align-items: center;
+}
+
+/*横並びレイアウト
+---------------------------------*/
+.inlineBlock {
+  display: flex;
+  align-items: center;
+}
+.inlineBlock label {
+  padding: 0 0.5em;
+}
+
+/*必須・任意ラベル
+---------------------------------*/
+.label-required,
+.label-any {
+  display: inline-block;
+  margin-left: 0.5em;
+  padding: 0.3em 0.5em;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 0.7em;
+  font-weight: normal;
+  line-height: 1;
+}
+
+.label-required {
+  background: #c00;
+}
+
+.label-any {
+  background: #3D98B4;
+}
+
+/*同意エリア
+---------------------------------*/
+.accept-area {
+  margin-top: rem(30);
+  padding: rem(30);
+  border: 1px solid #ccc;
+}
+
+.accept-area__text {
+  color: $white;
+}
+
+.accept-area__text a {
+  text-decoration: underline;
+}
+
+.accept-area__check {
+  display: block;
+  text-align: center;
+  margin-top: rem(10);
+}
+
+
+/*送信ボタンエリア
+---------------------------------*/
+.page-contact__submit {
+  margin-top: rem(48);
+  text-align: center;
+
+  @include mq(md) {
+    max-width: rem(360);
+    margin: rem(48) auto rem(120);
+  }
+}
+
+.submit-button {
+  appearance: none;
+  width: 100%;
+  margin: 0;
+  padding: rem(13);
+  border: 1px solid #000;
+  background: $white;
+  cursor: pointer;
+  transition: background .3s;
+}
+
+.submit-button:focus {
+  outline: solid 3px red;
+}
+
+@include mq(md) {
+  .submit-button:hover {
+    background: $black;
+    color: $white;
+  }
+
+}

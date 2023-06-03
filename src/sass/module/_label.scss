@@ -1,0 +1,19 @@
+@use "global" as *;
+
+/*=================================
+label
+=================================*/
+.label {
+
+}
+
+.label-item {
+  display: inline-block;
+  // font-weight: $bold;
+  line-height: 1;
+  color: $white;
+  background-color: $black;
+  padding: rem(5) rem(16) rem(8);
+  border-radius: 5px;
+  margin: 3px;
+}

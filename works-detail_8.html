@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta name="format-detection" content="telephone=no" />
+  <!-- meta情報 -->
+  <title>uiconnect emmet紹介映像詳細</title>
+  <meta name="description" content="emmet紹介映像の作品詳細" />
+  <!-- インデックスしない -->
+  <meta name="robots" content="noindex">
+  <!-- ogp -->
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:description" content="">
+  <!-- ファビコン -->
+  <link rel="icon" href="./images/common/favicon.svg" type="svg+xml">
+  <!-- css -->
+  <link rel="stylesheet" href="./css/styles.css">
+  <!-- JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script defer src="./js/script.js"></script>
+  <!-- グーグルフォント -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__inner inner">
+      <div class="header__logo logo">
+        <a href="./index.html" class="logo__link">
+          <img src="./images/common/uiconnect-logo.svg" alt="UIconnect">
+        </a>
+      </div>
+
+      <!-- ハンバーガーアイコン -->
+      <button class="header__drawer hamburger js-hamburger only-mobile">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- スマホメニュー -->
+      <nav class="header__sp-nav sp-nav js-drawer-menu only-mobile">
+        <ul class="sp-nav__items">
+          <li class="sp-nav__item"><a href="./index.html">home</a></li>
+        </ul>
+      </nav>
+
+      <!-- PCメニュー -->
+      <nav class="header__pc-nav pc-nav only-desktop">
+        <ul class="pc-nav__items">
+          <li class="pc-nav__item"><a href="./index.html">home</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <article class="works-detail">
+      <div class="works-detail__inner inner">
+        <h1 class="works-detail__header section-header">
+          作品詳細
+        </h1>
+        <div class="works-detail__image">
+          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/kxhvvkemgfE?loop=1&playlist=kxhvvkemgfE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <!-- <img src="./images/mockup/emmet.jpg" alt="emmet紹介映像"> -->
+        </div>
+        <dl class="works-detail__items">
+          <div class="works-detail__item">
+            <dt class="works-detail__dt">タイトル</dt>
+            <dd class="works-detail__dd">
+              emmet紹介映像
+            </dd>
+          </div>
+          <div class="works-detail__item">
+            <dt class="works-detail__dt">URL</dt>
+            <dd class="works-detail__dd works-detail__dd--url">
+              <a href="https://youtu.be/kxhvvkemgfE" target="_blank">https://youtu.be/kxhvvkemgfE</a>
+            </dd>
+          </div>
+          <div class="works-detail__item">
+            <dt class="works-detail__dt">BASIC認証</dt>
+            <dd class="works-detail__dd"></dd>
+          </div>
+          <div class="works-detail__item">
+            <dt class="works-detail__dt">GitHub</dt>
+            <dd class="works-detail__dd">
+              <a href="#" target="_blank"></a>
+            </dd>
+          </div>
+          <div class="works-detail__item">
+            <dt class="works-detail__dt">制作時間</dt>
+            <dd class="works-detail__dd">8時間</dd>
+          </div>
+          <div class="works-detail__item">
+            <dt class="works-detail__dt">レスポンシブ対応</dt>
+            <dd class="works-detail__dd"></dd>
+          </div>
+          <div class="works-detail__item">
+            <dt class="works-detail__dt">担当</dt>
+            <dd class="works-detail__dd">
+              <ul>
+                <li class="label-item">構成</li>
+                <li class="label-item">撮影</li>
+                <li class="label-item">編集</li>
+                <li class="label-item">デザイン</li>
+              </ul>
+            </dd>
+          </div>
+          <div class="works-detail__item">
+            <dt class="works-detail__dt">使用ツール</dt>
+            <dd class="works-detail__dd">
+              <ul>
+                <li class="label-item">Blender</li>
+              </ul>
+            </dd>
+          </div>
+          <div class="works-detail__item works-detail__item--description">
+            <dt class="works-detail__dt">概要</dt>
+            <dd class="works-detail__dd">
+              VScodeで使用するemmetについての解説動画を制作しました。まず構成に合わせた台本をきっちりと作り、それを元に自分で説明しながら画面録画しています。音声メインのためテロップは重要なコード部分のみにし、アニメーションも最小限にしました。撮影は一発撮りでしたが、間があいた部分をカットすることでテンポがよくなるようにしています。リップ音を目立たなくするためにBGMを使うなど、全体的にうまくまとめることができました。
+            </dd>
+          </div>
+        </dl>
+      </div>
+      <!-- works-detail__inner -->
+    </article>
+    <!-- works-detail -->
+  </main>
+  <!-- 戻るボタン -->
+  <a class="to-top" href="#">
+    <div class="to-top__arrow"></div>
+  </a>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <div class="footer__inner inner">
+      <p><small>&copy;2023 uiconnect</small></p>
+    </div>
+  </footer>
+</body>
+
+</html>

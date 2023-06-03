@@ -1,0 +1,86 @@
+@use "global" as *;
+
+/*=================================
+header
+=================================*/
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: $white;
+  height: rem(50);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  z-index: 300;
+}
+
+.header__inner {
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 rem(22);
+
+}
+
+.header__logo {
+  width: rem(95);
+
+}
+
+.pc-nav {
+  height: inherit;
+  display: none;
+  @include mq(md) {
+    display: block;
+  }
+}
+
+.header__pc-nav {
+
+}
+
+.pc-nav__items {
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pc-nav__item {
+  height: inherit;
+
+}
+
+.pc-nav__item a {
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $black;
+  padding: rem(20);
+  text-transform: capitalize;
+  font-weight: $medium;
+  position: relative;
+}
+
+.pc-nav__item a::after {
+  content: "";
+  position: absolute;
+  bottom: rem(12);
+  left: rem(18);
+  width: 0;
+  height: 1px;
+  background-color: transparent;
+  transition: background-color 0.3s, width 0.5s;
+}
+
+.pc-nav__item a:hover::after {
+  background-color: $main-color;
+  width: 60%;
+}
+
+.pc-nav__item--contact a:hover::after {
+  width: 67%;
+
+}

@@ -1,0 +1,17 @@
+@use "global" as *;
+
+/*=================================
+footer
+=================================*/
+.footer {
+  height: rem(50);
+  margin-top: rem(160);
+
+}
+
+.footer__inner {
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

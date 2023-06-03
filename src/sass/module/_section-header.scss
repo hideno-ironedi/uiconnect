@@ -1,0 +1,12 @@
+@use "global" as *;
+
+/*=================================
+section-header
+=================================*/
+.section-header {
+  text-align: center;
+  font-size: rem(50);
+  line-height: 1;
+  text-transform: capitalize;
+  font-weight: $medium;
+}

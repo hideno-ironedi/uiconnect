@@ -1,0 +1,67 @@
+@use "global" as *;
+
+/*=================================
+works
+=================================*/
+.works {
+  margin-top: rem(160);
+
+}
+
+.works__inner {
+  max-width: rem(640);
+  @include mq(md) {
+  max-width: rem(850);
+
+  }
+
+}
+
+.works__header {
+
+}
+
+.works__items {
+  margin-top: rem(48);
+  display: grid; //子要素をタイル状に並べる
+  grid-template-columns: repeat(1, 1fr); // 1列に並べる
+  gap: rem(30) rem(15); // 行間 列間
+
+  @include mq(md) {
+    grid-template-columns: repeat(3, 1fr); // 3列に並べる
+    gap: rem(15) rem(15); // 行間 列間
+
+  }
+}
+
+.works__item {
+
+}
+
+
+.works__link {
+  background-color: #fff;
+  display: block;
+}
+
+
+
+.works__image {
+  position: relative;
+  overflow: hidden;
+
+}
+
+.works__image img {
+  aspect-ratio: 310 / 200;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.works__link:hover .works__image img {
+  @include mq(md) {
+    transform: scale(1.1);
+
+  }
+}

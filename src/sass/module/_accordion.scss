@@ -1,0 +1,94 @@
+@use "global" as *;
+
+/*=================================
+accordion
+=================================*/
+
+summary {
+  /* display: list-item;以外を指定してデフォルトの三角形アイコンを消します */
+  display: block;
+}
+
+.summary_inner{
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  // justify-content: space-between;
+  align-items: center;
+  // padding: 16px 24px;
+  // border: 1px solid $black;
+  font-weight: bold;
+  color: $black;
+}
+
+.icon {
+  display: block;
+  position: relative;
+  width: 24px;
+  // margin-left: 6px;
+  flex-shrink: 0;
+  transform-origin: center 43%;
+  transition: transform 0.4s;
+  margin-right: rem(20);
+}
+
+/*details[open] .icon {*/
+/*  transform: rotate(180deg);*/
+/*}*/
+
+/* is-openedクラスが付与されたときのスタイル */
+details.is-opened .icon {
+  transform: rotate(180deg);
+}
+
+/* アイコンのバーのスタイル */
+.icon::before,
+.icon::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 15px;
+  height: 3px;
+  background-color: $black;
+}
+
+.icon::before {
+  left: 0;
+  transform: rotate(45deg);
+}
+
+.icon::after {
+  right: 0;
+  transform: rotate(-45deg);
+}
+
+/* --------アコーディオンの中身のスタイル-------- */
+.content {
+  overflow: hidden;
+  background-color: $bg;
+
+  /* details直下のタグにpaddingを設定すると挙動がおかしくなるので、ここには指定しない */
+}
+
+.content_inner {
+  // padding: 24px 48px;
+  display: flex;
+  flex-direction: column;
+  // gap: 16px;
+}
+
+/* --------レイアウト用のスタイル-------- */
+.wrapper {
+  width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper details {
+  margin-bottom: 16px;
+}
+
+.wrapper details:last-child {
+  margin-bottom: 0;
+}

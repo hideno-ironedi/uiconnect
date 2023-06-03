@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <!-- meta情報 -->
+  <title>uiconnect</title>
+  <meta name="description" content="ポートフォリオサイトです">
+  <!-- インデックスしない -->
+  <meta name="robots" content="noindex">
+  <!-- ogp -->
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:description" content="">
+  <!-- ファビコン -->
+  <link rel="icon" href="./images/common/favicon.svg" type="svg+xml">
+  <!-- css -->
+  <link rel="stylesheet" href="./css/styles.css">
+  <!-- JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script defer src="./js/script.js"></script>
+  <!-- グーグルフォント -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__inner inner">
+      <h1 class="header__logo logo">
+        <a href="#" class="logo__link">
+          <img src="./images/common/uiconnect-logo.svg" alt="UIconnect">
+        </a>
+      </h1>
+
+      <!-- ハンバーガーアイコン -->
+      <button class="header__drawer hamburger js-hamburger only-mobile">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- スマホメニュー -->
+      <nav class="header__sp-nav sp-nav js-drawer-menu only-mobile">
+        <ul class="sp-nav__items">
+          <li class="sp-nav__item"><a href="#about">about</a></li>
+          <li class="sp-nav__item"><a href="#works">works</a></li>
+          <li class="sp-nav__item"><a href="./contact.html">contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- PCメニュー -->
+      <nav class="header__pc-nav pc-nav only-desktop">
+        <ul class="pc-nav__items">
+          <li class="pc-nav__item"><a href="#about">about</a></li>
+          <li class="pc-nav__item"><a href="#works">works</a></li>
+          <li class="pc-nav__item pc-nav__item--contact"><a href="./contact.html">contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="first-view">
+    <picture class="first-view__image">
+      <source media="(max-width: 767px)" srcset="./images/common/sp-first.jpg">
+      <img src="./images/common/pc-first.jpg" alt="#">
+    </picture>
+    <div class="first-view__body">
+      <p class="first-view__title">
+        世界をツナグ 心をムスブ
+      </p>
+      <p class="first-view__sub-title">
+        Be there for those in need in front of you.
+      </p>
+    </div>
+  </div>
+  <!-- first-view -->
+
+  <main>
+    <section class="about" id="about">
+      <div class="about__inner inner">
+        <h2 class="about__header section-header">
+          about
+        </h2>
+        <div class="about__items">
+          <div class="about__body">
+            <div class="about__contents">
+              <div class="about__content profile">
+                <p class="about__heading">
+                  プロフィール
+                </p>
+                <p class="about__text">
+                  こんにちは。ご覧いただきありがとうございます！　思いやりエンジニアのYASUです。<br>お客様からは、お渡ししたマニュアルが分かりやすいと喜ばれるなど、しっかりした準備と相手目線に立った対応でご満足いただけております。少しでも気になることがあればお気軽にご連絡ください！
+                </p>
+              </div>
+              <div class="about__content career">
+                <p class="about__heading">
+                  経歴
+                </p>
+                <p class="about__text">
+                  15年ほどDTPオペレータとしてさまざまな印刷物に携わる。DTPに関連するアプリの習熟、基本的な印刷の知識や印刷に適したデータの作成法を習得。<br>新たな挑戦としてWebエンジニアの仕事を始める。デザインからコーディング、ドメインなどのサーバ周りを含めたホームページ公開までの一連の流れを経験。
+                </p>
+              </div>
+              <div class="about__content skils">
+                <p class="about__heading">
+                  保有スキル
+                </p>
+                <ul class="label about__text">
+                  <li class="label-item">HTML</li>
+                  <li class="label-item">CSS</li>
+                  <li class="label-item">JavaScript</li>
+                  <li class="label-item">MySQL</li>
+                  <li class="label-item">Java</li>
+                  <li class="label-item">WordPress</li>
+                  <li class="label-item">PHP</li>
+                  <li class="label-item">Photoshop</li>
+                  <li class="label-item">Illustrator</li>
+                  <li class="label-item">InDesign</li>
+                  <li class="label-item">Blender</li>
+                </ul>
+              </div>
+              <!-- skils -->
+
+              <div class="about__content expert">
+                <p class="about__heading">
+                  専門領域
+                </p>
+                <ul class="label about__text">
+                  <li class="label-item">コーディング</li>
+                  <li class="label-item">デザイン</li>
+                  <li class="label-item">ライティング</li>
+                  <li class="label-item">動画編集</li>
+                </ul>
+              </div>
+              <!-- expert -->
+
+              <div class="about__content likes">
+                <details class="js-details">
+                  <summary class="about__heading js-summary">
+                    <span class="summary_inner">
+                      <span class="icon"></span>
+                      好きなもの
+                    </span>
+                  </summary>
+                  <div class="content js-content">
+                    <div class="content_inner">
+                      <ul class="label about__text">
+                        <li class="label-item">プロレス</li>
+                        <li class="label-item">ラジオ</li>
+                        <li class="label-item">将棋</li>
+                        <li class="label-item">自転車</li>
+                        <li class="label-item">散歩</li>
+                        <li class="label-item">電車</li>
+                        <li class="label-item">フットサル</li>
+                      </ul>
+
+                    </div>
+                  </div>
+                </details>
+              </div>
+              <!-- likes -->
+
+              <div class="about__content school">
+                <details class="js-details">
+                  <summary class="about__heading js-summary">
+                    <span class="summary_inner">
+                      <span class="icon"></span>
+                      職業訓練校SHINBIデザインスクール
+                    </span>
+                  </summary>
+                  <div class="content js-content">
+                    <div class="content_inner">
+                      <p class="about__text">
+                        2023年1月より職業訓練校でJavaを学ぶ。<br>
+                        スキルの向上に加え、目の前が開けてくる言葉との出会いがあり、自分が変化するきっかけを得ることができました。<br>通っている職業訓練校の感想ブログを書いています。どんなことをやっているのか、それによってどうなっていくのか、今後入校を考えている人がイメージしやすいように構成を考えています。<br>よろしければ下のリンクからご覧ください。
+                      </p>
+                      <div class="card blog">
+                        <a href="https://design-shinbi.com/category/ds_studentblog/" target="_blank">
+                          <div>
+                            <img src="./images/thumbnail/shinbi.png" alt="#">
+                          </div>
+                        </a>
+                      </div>
+
+                    </div>
+                  </div>
+                </details>
+              </div>
+              <!-- school -->
+            </div>
+            <!-- about__contents -->
+          </div>
+          <!-- about__body -->
+          <div class="about__image">
+            <img src="./images/common/about.jpg" alt="#">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- about-section -->
+
+    <section class="works" id="works">
+      <div class="works__inner inner">
+        <h2 class="works__header section-header">
+          works
+        </h2>
+        <div class="works__items cards">
+          <div class="works__item card game">
+            <a href="./works-detail_1.html" class="works__link">
+              <div class="works__image">
+                <img src="./images/thumbnail/national-flag.png" alt="国旗神経衰弱ゲーム">
+              </div>
+            </a>
+          </div>
+          <div class="works__item card app">
+            <a href="./works-detail_2.html" class="works__link">
+              <div class="works__image">
+                <img src="./images/thumbnail/character-count.png" alt="文字数カウントアプリ">
+              </div>
+            </a>
+          </div>
+          <div class="works__item card web">
+            <a href="./works-detail_3.html" class="works__link">
+              <div class="works__image">
+                <img src="./images/thumbnail/programming5.png" alt="シンビ作品紹介サイト">
+              </div>
+            </a>
+          </div>
+          <div class="works__item card web">
+            <a href="./works-detail_4.html" class="works__link">
+              <div class="works__image">
+                <img src="./images/thumbnail/portfolio.png" alt="ポートフォリオサイト">
+              </div>
+            </a>
+          </div>
+          <div class="works__item card web">
+            <a href="./works-detail_5.html" class="works__link">
+              <div class="works__image">
+                <img src="./images/thumbnail/codeups1.png" alt="コーポレートサイト1">
+              </div>
+            </a>
+          </div>
+          <div class="works__item card web">
+            <a href="./works-detail_6.html" class="works__link">
+              <div class="works__image">
+                <img src="./images/thumbnail/codeups2.png" alt="コーポレートサイト2">
+              </div>
+            </a>
+          </div>
+          <div class="works__item card web">
+            <a href="./works-detail_7.html" class="works__link">
+              <div class="works__image">
+                <img src="./images/thumbnail/greenthumb.png" alt="認定NPO法人グリーンサム">
+              </div>
+            </a>
+          </div>
+          <div class="works__item card movie">
+            <a href="./works-detail_8.html" class="works__link">
+              <div class="works__image">
+                <img src="./images/thumbnail/emmet.png" alt="emmet紹介映像">
+              </div>
+            </a>
+          </div>
+          <div class="works__item card graphic">
+            <a href="./works-detail_9.html" class="works__link">
+              <div class="works__image">
+                <img src="./images/thumbnail/graphic.png" alt="名刺とチラシ">
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- works-section -->
+
+    <section class="contact" id="contact">
+      <div class="contact__inner inner">
+        <h2 class="contact__header section-header">
+          contact
+        </h2>
+        <div class="contact__button">
+          <a href="./contact.html" class="button"><span class="button__span">お問い合わせへ</span></a>
+        </div>
+      </div>
+    </section>
+    <!-- contact-section -->
+  </main>
+
+  <!-- 戻るボタン -->
+  <a class="to-top" href="#">
+    <div class="to-top__arrow"></div>
+  </a>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <div class="footer__inner inner">
+      <p><small>&copy;2023 uiconnect</small></p>
+    </div>
+  </footer>
+</body>
+
+</html>
