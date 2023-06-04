@@ -306,7 +306,7 @@ p.error_messe {
 	color: #fff;
 }
 /*　簡易版レスポンシブ用CSS（必要最低限のみとしています。ブレークポイントも含め自由に設定下さい）　*/
-@media screen and (max-width:768px) {
+@media screen and (max-width:767px) {
 #formWrap {
 	width: 100%;
 	max-width:550px;
